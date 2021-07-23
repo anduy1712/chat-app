@@ -1,0 +1,46 @@
+ul {
+  padding: 0;
+  list-style: none;
+}
+.message {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.message.sent {
+  flex-direction: row-reverse;
+  padding-right: 14px;
+  display: flex;
+}
+.message.sent + .message.sent {
+}
+.message p {
+  margin: 0;
+}
+.message.sent .message__content--name {
+  text-align: right;
+}
+.message.received .message__content {
+  margin-left: 20px;
+}
+.message.sent .message__content {
+  margin-right: 20px;
+}
+.message__content--name {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.message__content--text {
+  max-width: 718px;
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 1px 4px 6px rgb(0 0 0 / 8%);
+}
+.message.sent .message__content--text {
+  border-top-right-radius: 0;
+}
+.message.received .message__content--text {
+  border-top-left-radius: 0;
+}
